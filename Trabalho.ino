@@ -1,6 +1,5 @@
 #include <ArduinoJson.h>
 #include "EspMQTTClient.h"
-#include <Wire.h>
 
 //config. MQTT
 EspMQTTClient client
@@ -36,10 +35,9 @@ void setup() {
   pinMode(pinSensorFogo, INPUT);
   pinMode(pinBuzzer, OUTPUT);
 
-  Serial.println("Esperando o Sensor se Adaptar");
+  Serial.println("Carregando sensor");
   delay(5000);
 
-  Serial.println("Fim do setup()");
 }
 
 void onConnectionEstablished()
